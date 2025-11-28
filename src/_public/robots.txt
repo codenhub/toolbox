@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://website-template.coden.agency/sitemap.xml
+Sitemap: https://toolbox.coden.agency/sitemap.xml

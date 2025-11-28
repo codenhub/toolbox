@@ -2,68 +2,36 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header
-        class="flex p-4 justify-center bg-background/80 backdrop-blur-sm fixed inset-x-0 anim-down-in border-b border-transparent z-99 transition-all duration-400">
-        <div class="sect-container flex-row justify-between">
+        class="flex py-8 px-4 items-center justify-center bg-background/80 backdrop-blur-sm border-b border-transparent z-99 transition-all duration-400 anim-down-in">
+        <div class="sect-container xs:flex-row gap-6 justify-between">
           <a href="#">
-            <img src="/logo.svg" alt="Logo" class="h-10 object-contain" />
+            <img src="/logotipo.svg" alt="Logo" class="h-10 w-fit object-contain" />
           </a>
 
-          <!-- DESKTOP NAV -->
-          <div class="hidden md:flex gap-4 items-center">
-            <nav class="flex gap-4">
-              <a href="#why-this-template" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Why us?</a>
-              <a href="#features" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Features</a>
-              <a href="#testimonials" class="hover:font-semibold hover:tracking-wide transition-all duration-400">Testimonials</a>
-              <a href="#faq" class="hover:font-semibold hover:tracking-wide transition-all duration-400">FAQ</a>
-            </nav>
-            <a href="https://github.com/codenhub/website-template" target="_blank" class="primary-btn">Get template</a>
-          </div>
-          <!-- END DESKTOP NAV -->
-
-          <!-- MOBILE NAV -->
-          <div class="flex md:hidden">
-            <input type="checkbox" id="mobile-menu" class="peer sr-only" />
-            <label class="flex flex-col w-6 gap-1.5 py-2 cursor-pointer" for="mobile-menu">
-              <div class="w-full h-0.5 bg-neutral-950"></div>
-              <div class="w-full h-0.5 bg-neutral-950"></div>
-              <div class="w-full h-0.5 bg-neutral-950"></div>
-            </label>
-            <div
-              class="absolute flex top-18 inset-x-0 bg-background shadow-lg p-4 max-h-0 opacity-0 peer-checked:max-h-max peer-checked:opacity-100 transition-all duration-400"
-              style="interpolate-size: allow-keywords">
-              <nav class="flex flex-col w-full gap-2">
-                <a href="#why-this-template" class="flex w-full text-center justify-center text-lg tracking-wide">Why us?</a>
-                <a href="#features" class="flex w-full text-center justify-center text-lg tracking-wide">Features</a>
-                <a href="#testimonials" class="flex w-full text-center justify-center text-lg tracking-wide">Testimonials</a>
-                <a href="#faq" class="flex w-full text-center justify-center text-lg tracking-wide">FAQ</a>
-                <a href="https://github.com/codenhub/website-template" target="_blank" class="primary-btn">Get template</a>
-              </nav>
+          <!-- SEARCH -->
+          <div class="flex gap-4 items-center">
+            <div class="relative">
+              <input type="text" placeholder="Search" class="peer">
+              <button class="absolute size-4 right-4 top-1/2 -translate-y-1/2 text-neutral-600 peer-focus:text-neutral-50 transition duration-400">
+                <svg
+                  version="1.2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="60"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m331.5 331.3l154.4 154.6m-102.2-281c0 98.8-80 178.8-178.8 178.8-98.8 0-178.8-80-178.8-178.8 0-98.8 80-178.8 178.8-178.8 98.8 0 178.8 80 178.8 178.8z"/>
+                </svg>
+              </button>
             </div>
           </div>
-          <!-- END MOBILE NAV -->
+          <!-- END SEARCH -->
         </div>
       </header>
     `;
-
-    // HIDE/SHOW ON SCROLL
-    let lastScrollY = window.scrollY;
-    document.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
-      const currentScrollY = window.scrollY;
-      const direction = currentScrollY > lastScrollY ? "down" : "up";
-      if (direction === "down") {
-        header.classList.add("-translate-y-1/1");
-        header.classList.remove("border-neutral-300");
-      }
-      if (direction === "up") {
-        header.classList.remove("-translate-y-1/1");
-        // ADD SHADOW IF NOT TOP
-        header.classList.toggle("border-transparent", !(currentScrollY > 0));
-        header.classList.toggle("border-neutral-300", currentScrollY > 0);
-      }
-      lastScrollY = currentScrollY;
-    });
-    // END HIDE/SHOW ON SCROLL
   }
 }
 

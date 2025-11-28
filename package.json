@@ -6,9 +6,6 @@
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write ."
   },
-  "dependencies": {
-    "gsap": "^3.13.0"
-  },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "prettier": "^3.6.2",

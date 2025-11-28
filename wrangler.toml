@@ -1,5 +1,5 @@
-name = "website-template"
-compatibility_date = "2025-10-08"
+name = "toolbox"
+compatibility_date = "2025-11-24"
 
 [assets]
 directory = "./dist"
