@@ -41,8 +41,4 @@
   .secondary-btn {
     @apply bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-full transition duration-400;
   }
-
-  .card {
-    @apply flex flex-col p-8 gap-4 border bg-background border-border rounded-md shadow-primary/10 hover:shadow-md hover:border-primary transition duration-400;
-  }
 }

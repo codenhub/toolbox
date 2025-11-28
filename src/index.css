@@ -1,0 +1,15 @@
+@reference "./_ui/main.css";
+
+@layer components {
+  .card-out {
+    @apply relative overflow-hidden bg-foreground p-8 rounded-2xl hover:scale-97 transition duration-400;
+
+    & .arrow-link {
+      @apply size-8 absolute -top-8 -right-8 group-hover:top-8 group-hover:right-8 transition-all duration-400;
+    }
+
+    & .card-inn {
+      @apply flex flex-col gap-4 group-hover:scale-96 transition duration-400;
+    }
+  }
+}
