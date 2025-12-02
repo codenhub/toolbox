@@ -20,7 +20,7 @@
     <meta property="og:title" content="Toolbox" />
     <meta
       property="og:description"
-      content="A complete website template built with Vite + TailwindCSS. Includes smooth and ready-to-use animations, SEO configs, and a scalable structure."
+      content="A set of simple tools created to streamline everyday tasks."
     />
     <meta
       property="og:image"
@@ -29,7 +29,7 @@
 
     <!-- Other Meta Tags -->
     <meta http-equiv="last-modified" content="2025-11-24T12:00:00+00:00" />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#fafafa" />
 
     <!-- Styles & Scripts -->
     <link rel="stylesheet" href="./_ui/main.css" />
@@ -40,62 +40,12 @@
     <title>Toolbox</title>
     <meta
       name="description"
-      content="A complete website template built with Vite + TailwindCSS. Includes smooth and ready-to-use animations, SEO configs, and a scalable structure."
+      content="A set of simple tools created to streamline everyday tasks."
     />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   </head>
 
-  <body class="bg-background">
-    <!-- LOADER -->
-    <div class="loader left"></div>
-    <div class="loader right"></div>
-    <div
-      id="loader-indicator"
-      class="z-999 fixed left-1/2 top-1/2 -translate-1/2 size-16 text-text"
-    >
-      <svg stroke="currentColor" viewBox="0 0 24 24">
-        <style>
-          .spinner {
-            transform-origin: center;
-            animation: rotate 2s linear infinite;
-          }
-
-          .spinner circle {
-            stroke-linecap: round;
-            animation: grow 1.5s ease-in-out infinite;
-          }
-
-          @keyframes rotate {
-            to {
-              transform: rotate(360deg);
-            }
-          }
-
-          @keyframes grow {
-            0% {
-              stroke-dasharray: 0 150;
-              stroke-dashoffset: 0;
-            }
-
-            50% {
-              stroke-dasharray: 42 150;
-              stroke-dashoffset: -16;
-            }
-
-            95%,
-            100% {
-              stroke-dasharray: 42 150;
-              stroke-dashoffset: -59;
-            }
-          }
-        </style>
-        <g class="spinner">
-          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
-        </g>
-      </svg>
-    </div>
-    <!-- END LOADER -->
-
+  <body>
     <!-- HEADER -->
     <custom-header></custom-header>
     <!-- END HEADER -->
@@ -111,14 +61,43 @@
           <div class="card-inn">
             <img
               src="/assets/icons/color-picker.svg"
-              alt="Animations icon"
+              alt="Color pallete icon"
               class="size-20"
             />
             <h3>Color picker</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              aliquam, optio provident consequatur.
-            </p>
+            <p>Manipulate and select colors in HEX, RGB, HSL, and more.</p>
+          </div>
+        </a>
+        <a href="#" class="group card-out">
+          <img
+            src="/assets/icons/arrow-link.svg"
+            class="arrow-link"
+            alt="Arrow-out icon"
+          />
+          <div class="card-inn">
+            <img
+              src="/assets/icons/notepad.svg"
+              alt="Notepad icon"
+              class="size-20"
+            />
+            <h3>Notepad</h3>
+            <p>A fast and powerful text editor.</p>
+          </div>
+        </a>
+        <a href="/password-generator/" class="group card-out">
+          <img
+            src="/assets/icons/arrow-link.svg"
+            class="arrow-link"
+            alt="Arrow-out icon"
+          />
+          <div class="card-inn">
+            <img
+              src="/assets/icons/password.svg"
+              alt="Locker icon"
+              class="size-20"
+            />
+            <h3>Password generator</h3>
+            <p>Generate passwords easily and fast.</p>
           </div>
         </a>
       </div>

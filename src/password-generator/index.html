@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Author & Copyright -->
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://toolbox.coden.agency/password-generator/"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://toolbox.coden.agency/password-generator/"
+    />
+    <meta property="og:title" content="Password Generator | Toolbox" />
+    <meta
+      property="og:description"
+      content="A set of simple tools created to streamline everyday tasks."
+    />
+    <meta
+      property="og:image"
+      content="https://toolbox.coden.agency/og-image.jpg"
+    />
+
+    <!-- Other Meta Tags -->
+    <meta http-equiv="last-modified" content="2025-11-24T12:00:00+00:00" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="../_ui/main.css" />
+    <script type="module" src="../_ui/main.ts" defer></script>
+    <script type="module" src="./index.ts"></script>
+
+    <!-- Website info -->
+    <title>Password Generator | Toolbox</title>
+    <meta
+      name="description"
+      content="A set of simple tools created to streamline everyday tasks."
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <custom-header></custom-header>
+    <!-- END HEADER -->
+
+    <main class="sect mb-auto">
+      <div class="sect-container">
+        <h2>Password generator</h2>
+        <div
+          class="relative flex w-fit items-center p-4 gap-4 rounded-md border border-border"
+        >
+          <span class="text-xl mr-6">Ho48jk@#hjk</span>
+          <button>
+            <img
+              src="/assets/icons/refresh.svg"
+              alt="Regenerate icon"
+              class="size-4"
+            />
+          </button>
+          <button class="primary-btn p-2 aspect-square">
+            <img src="/assets/icons/copy.svg" alt="Copy icon" class="size-4" />
+          </button>
+        </div>
+        <div class="flex gap-2 items-center">
+          <p class="text-lg font-bold mr-2">Length:</p>
+          <input
+            type="range"
+            name="pw-len"
+            id="pw-len"
+            value="12"
+            min="6"
+            max="50"
+            step="1"
+          />
+          <p id="pw-len-text">12</p>
+        </div>
+        <div class="flex gap-4 items-center">
+          <p class="text-lg font-bold mr-2">Include:</p>
+          <label for="upper" class="flex gap-2 items-center">
+            <input type="checkbox" name="upper" id="upper" checked />
+            <span>Uppercase</span>
+          </label>
+          <label for="lower" class="flex gap-2 items-center">
+            <input type="checkbox" name="lower" id="lower" checked />
+            <span>Lowercase</span>
+          </label>
+          <label for="numbers" class="flex gap-2 items-center">
+            <input type="checkbox" name="numbers" id="numbers" checked />
+            <span>Numbers</span>
+          </label>
+          <label for="symbols" class="flex gap-2 items-center">
+            <input type="checkbox" name="symbols" id="symbols" checked />
+            <span>Symbols</span>
+          </label>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <custom-footer></custom-footer>
+    <!-- END FOOTER -->
+
+    <script type="module" src="../_ui/components/index.ts" defer></script>
+  </body>
+</html>

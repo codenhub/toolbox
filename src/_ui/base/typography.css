@@ -17,11 +17,11 @@
   }
 
   h1 {
-    @apply text-7xl md:text-8xl font-default tracking-tight text-text;
+    @apply text-7xl font-default font-bold tracking-tight text-text;
   }
 
   h2 {
-    @apply text-5xl md:text-6xl font-default tracking-tight text-text;
+    @apply text-5xl font-default font-semibold tracking-tight text-text;
   }
 
   h3 {

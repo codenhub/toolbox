@@ -31,14 +31,14 @@
   }
 
   .sect-container {
-    @apply flex flex-col w-full max-w-7xl gap-12 items-center;
+    @apply flex flex-col w-full max-w-7xl gap-8;
   }
 
   .primary-btn {
-    @apply bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-full transition duration-400;
+    @apply bg-primary hover:bg-primary-hover text-primary-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 
   .secondary-btn {
-    @apply bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-full transition duration-400;
+    @apply bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
 }
