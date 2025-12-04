@@ -4,7 +4,7 @@ class Header extends HTMLElement {
       <header
         class="flex py-8 px-4 items-center justify-center bg-background/80 backdrop-blur-sm border-b border-transparent z-99 transition-all duration-400 anim-down-in">
         <div class="sect-container xs:flex-row gap-6 justify-between">
-          <a href="#">
+          <a href="/">
             <img src="/logotipo.svg" alt="Logo" class="h-10 w-fit object-contain" />
           </a>
 
