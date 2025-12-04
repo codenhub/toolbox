@@ -52,6 +52,56 @@
   </head>
 
   <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div
+      id="loader-indicator"
+      class="z-999 fixed left-1/2 top-1/2 -translate-1/2 size-16 text-text"
+    >
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
     <!-- HEADER -->
     <custom-header></custom-header>
     <!-- END HEADER -->
@@ -62,15 +112,15 @@
         <div
           class="relative flex w-fit items-center p-4 gap-4 rounded-md border border-border"
         >
-          <span class="text-xl mr-6">Ho48jk@#hjk</span>
-          <button>
+          <span id="pw" class="text-xl mr-6"></span>
+          <button id="regen">
             <img
               src="/assets/icons/refresh.svg"
               alt="Regenerate icon"
               class="size-4"
             />
           </button>
-          <button class="primary-btn p-2 aspect-square">
+          <button id="copy" class="primary-btn p-2 aspect-square">
             <img src="/assets/icons/copy.svg" alt="Copy icon" class="size-4" />
           </button>
         </div>
