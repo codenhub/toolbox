@@ -1,0 +1,24 @@
+#container {
+  --current-color: rgb(255, 255, 255);
+  --current-hue-color: rgb(255, 0, 0);
+  --current-hue: 0;
+  & #color-area {
+    background-color: var(--current-hue-color);
+    background-image:
+      linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+      linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  }
+
+  & #hue-slider {
+    background: linear-gradient(
+      to right,
+      rgb(255, 0, 0),
+      rgb(255, 255, 0),
+      rgb(0, 255, 0),
+      rgb(0, 255, 255),
+      rgb(0, 0, 255),
+      rgb(255, 0, 255),
+      rgb(255, 0, 0)
+    );
+  }
+}

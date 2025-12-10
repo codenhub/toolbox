@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Author & Copyright -->
+    <meta name="author" content="Coden Agency" />
+    <meta name="copyright" content="Coden Agency" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://toolbox.coden.agency/color-picker/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://toolbox.coden.agency/color-picker/"
+    />
+    <meta property="og:title" content="Color Picker | Toolbox" />
+    <meta
+      property="og:description"
+      content="A set of simple tools created to streamline everyday tasks."
+    />
+    <meta
+      property="og:image"
+      content="https://toolbox.coden.agency/og-image.jpg"
+    />
+
+    <!-- Other Meta Tags -->
+    <meta http-equiv="last-modified" content="2025-11-24T12:00:00+00:00" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="../_ui/main.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="../_ui/main.ts" defer></script>
+    <script type="module" src="./index.ts"></script>
+
+    <!-- Website info -->
+    <title>Color Picker | Toolbox</title>
+    <meta
+      name="description"
+      content="A set of simple tools created to streamline everyday tasks."
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div class="loader left"></div>
+    <div class="loader right"></div>
+    <div
+      id="loader-indicator"
+      class="z-999 fixed left-1/2 top-1/2 -translate-1/2 size-16 text-text"
+    >
+      <svg stroke="currentColor" viewBox="0 0 24 24">
+        <style>
+          .spinner {
+            transform-origin: center;
+            animation: rotate 2s linear infinite;
+          }
+
+          .spinner circle {
+            stroke-linecap: round;
+            animation: grow 1.5s ease-in-out infinite;
+          }
+
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes grow {
+            0% {
+              stroke-dasharray: 0 150;
+              stroke-dashoffset: 0;
+            }
+
+            50% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -16;
+            }
+
+            95%,
+            100% {
+              stroke-dasharray: 42 150;
+              stroke-dashoffset: -59;
+            }
+          }
+        </style>
+        <g class="spinner">
+          <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+        </g>
+      </svg>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- HEADER -->
+    <custom-header></custom-header>
+    <!-- END HEADER -->
+
+    <main class="sect mb-auto">
+      <div class="sect-container p-6 border border-border rounded-lg">
+        <h3>Color picker</h3>
+        <div class="flex gap-6">
+          <div id="container" class="flex flex-col w-fit gap-4">
+            <!-- <div class="flex h-16 w-full rounded-lg border border-border">
+              <div class="flex flex-1 size-full bg-neutral-800"></div>
+              <div class="flex flex-1 size-full bg-neutral-600"></div>
+            </div> -->
+            <div
+              id="color-area"
+              class="relative flex h-60 aspect-4/3 border border-border rounded-lg"
+            >
+              <div
+                id="color-picker"
+                class="absolute size-6 border-2 border-text rounded-full -translate-1/2 left-0 top-0 bg-(--current-color)"
+              ></div>
+            </div>
+            <div id="hue-slider" class="flex relative w-full h-4 rounded-full">
+              <div
+                id="hue-picker"
+                class="absolute flex size-6 rounded-full border-2 border-text -translate-1/2 top-1/2 left-0 bg-(--current-hue-color) cursor-grab"
+              ></div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="group relative flex gap-2 items-center">
+              <p class="text-xl">HEX:</p>
+              <input type="text" placeholder="#ffffff" value="#ffffff" />
+              <button
+                class="absolute size-5 right-0 top-1/2 -translate-1/2 opacity-0 group-hover:opacity-100 transition duration-400"
+              >
+                <img
+                  src="/assets/icons/copy.svg"
+                  alt="Copy icon"
+                  class="brightness-0 invert"
+                />
+              </button>
+            </div>
+            <div class="group relative flex gap-2 items-center">
+              <p class="text-xl">RGB:</p>
+              <input
+                type="text"
+                placeholder="255, 255, 255"
+                value="255, 255, 255"
+              />
+              <button
+                class="absolute size-5 right-0 top-1/2 -translate-1/2 opacity-0 group-hover:opacity-100 transition duration-400"
+              >
+                <img
+                  src="/assets/icons/copy.svg"
+                  alt="Copy icon"
+                  class="brightness-0 invert"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <custom-footer></custom-footer>
+    <!-- END FOOTER -->
+
+    <script type="module" src="../_ui/components/index.ts" defer></script>
+  </body>
+</html>
