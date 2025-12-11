@@ -1,4 +1,6 @@
-import { HSV, hsvToRgb } from "./models.ts";
+import { Controller, CMYK, HSL, HSV, RGB } from "./models.ts";
+
+const controller = new Controller();
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("container") as HTMLDivElement;
@@ -8,16 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const sliderPicker = document.getElementById("hue-picker") as HTMLDivElement;
   const hsv: HSV = {
     h: 0,
-    s: 100,
+    s: 0,
     v: 100,
   };
 
   const updateColor = () => {
-    container.style.setProperty("--current-color", hsvToRgb(hsv));
-    container.style.setProperty(
-      "--current-hue-color",
-      hsvToRgb({ h: hsv.h, s: 100, v: 100 }),
-    );
+    controller.update(hsv);
+    container.style.setProperty("--current-color", controller.getRgbCssValue());
+    const { r, g, b } = controller.hsvToRgb({ h: hsv.h, s: 100, v: 100 });
+    container.style.setProperty("--current-hue-color", `rgb(${r}, ${g}, ${b})`);
     container.style.setProperty("--current-hue", `${hsv.h}`);
   };
 

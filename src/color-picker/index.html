@@ -119,13 +119,13 @@
             >
               <div
                 id="color-picker"
-                class="absolute size-6 border-2 border-text rounded-full -translate-1/2 left-0 top-0 bg-(--current-color)"
+                class="absolute size-6 border-2 border-text rounded-full -translate-1/2 left-0 top-0 bg-(--current-color) cursor-pointer"
               ></div>
             </div>
             <div id="hue-slider" class="flex relative w-full h-4 rounded-full">
               <div
                 id="hue-picker"
-                class="absolute flex size-6 rounded-full border-2 border-text -translate-1/2 top-1/2 left-0 bg-(--current-hue-color) cursor-grab"
+                class="absolute flex size-6 rounded-full border-2 border-text -translate-1/2 top-1/2 left-0 bg-(--current-hue-color) cursor-pointer"
               ></div>
             </div>
           </div>
@@ -148,8 +148,8 @@
               <p class="text-xl">RGB:</p>
               <input
                 type="text"
-                placeholder="255, 255, 255"
-                value="255, 255, 255"
+                placeholder="rgb(255, 255, 255)"
+                value="rgb(255, 255, 255)"
               />
               <button
                 class="absolute size-5 right-0 top-1/2 -translate-1/2 opacity-0 group-hover:opacity-100 transition duration-400"
