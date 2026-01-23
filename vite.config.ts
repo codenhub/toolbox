@@ -10,6 +10,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "./src/index.html",
+        colorPicker: "./src/color-picker/index.html",
+        passwordGenerator: "./src/password-generator/index.html",
       },
     },
   },

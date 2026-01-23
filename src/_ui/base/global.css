@@ -15,7 +15,7 @@
   }
 
   button {
-    @apply [&:not(:disabled)]:cursor-pointer;
+    @apply disabled:cursor-not-allowed cursor-pointer;
   }
 
   img {

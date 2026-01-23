@@ -1,5 +1,6 @@
 class Footer extends HTMLElement {
   connectedCallback() {
+    this.style.marginTop = "auto";
     this.innerHTML = `
       <footer class="sect">
         <div class="sect-container flex-col gap-8">

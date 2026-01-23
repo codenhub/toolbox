@@ -1,8 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // LOADER
+window.onload = () => {
   const loaders = document.querySelectorAll(".loader");
   const loaderIndicator = document.getElementById("loader-indicator");
-  // REMOVE LOADER
+
   loaderIndicator?.remove();
   loaders?.forEach((el) => {
     el.classList.add("loaded");
@@ -11,8 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 800);
   });
 
-  // MAKE IMAGES AND LINKS NOT DRAGGABLE
-  document.querySelectorAll("img, a").forEach((img) => {
-    img.setAttribute("draggable", "false");
+  document.querySelectorAll("img, a").forEach((el) => {
+    el.setAttribute("draggable", "false");
   });
-});
+};

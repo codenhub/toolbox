@@ -8,8 +8,7 @@ class Header extends HTMLElement {
             <img src="/logotipo.svg" alt="Logo" class="h-10 w-fit object-contain" />
           </a>
 
-          <!-- SEARCH -->
-          <div class="flex gap-4 items-center">
+          <!-- <div class="flex gap-4 items-center">
             <div class="relative">
               <input type="text" placeholder="Search" class="peer">
               <button class="absolute size-4 right-4 top-1/2 -translate-y-1/2 text-neutral-600 peer-focus:text-neutral-50 transition duration-400">
@@ -27,8 +26,7 @@ class Header extends HTMLElement {
                 </svg>
               </button>
             </div>
-          </div>
-          <!-- END SEARCH -->
+          </div> -->
         </div>
       </header>
     `;
