@@ -4,17 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Author & Copyright -->
     <meta name="author" content="Coden Agency" />
     <meta name="copyright" content="Coden Agency" />
 
-    <!-- Robots -->
     <meta name="robots" content="index, follow" />
-
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://toolbox.coden.agency/color-picker/" />
-
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
@@ -29,24 +23,20 @@
       property="og:image"
       content="https://toolbox.coden.agency/og-image.jpg"
     />
-
-    <!-- Other Meta Tags -->
-    <meta http-equiv="last-modified" content="2025-11-24T12:00:00+00:00" />
+    <meta http-equiv="last-modified" content="2026-01-23T10:21:00-03:00" />
     <meta name="theme-color" content="#fafafa" />
 
-    <!-- Styles & Scripts -->
-    <link rel="stylesheet" href="../_ui/main.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="../_ui/main.ts" defer></script>
-    <script type="module" src="./index.ts"></script>
-
-    <!-- Website info -->
     <title>Color Picker | Toolbox</title>
     <meta
       name="description"
       content="A set of simple tools created to streamline everyday tasks."
     />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="../_ui/main.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="../_ui/main.ts"></script>
+    <script type="module" src="../_ui/components/index.ts" defer></script>
+    <script type="module" src="./index.ts" defer></script>
   </head>
 
   <body>
@@ -100,9 +90,7 @@
     </div>
     <!-- END LOADER -->
 
-    <!-- HEADER -->
     <custom-header></custom-header>
-    <!-- END HEADER -->
 
     <main class="sect mb-auto">
       <div class="sect-container p-6 border border-border rounded-lg">
@@ -130,8 +118,8 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-4">
-            <div class="group relative flex gap-2 items-center">
+          <div id="inputs-container" class="flex flex-col gap-4">
+            <!-- <div class="group relative flex gap-2 items-center">
               <p class="text-xl">HEX:</p>
               <input type="text" placeholder="#ffffff" value="#ffffff" />
               <button
@@ -143,33 +131,12 @@
                   class="brightness-0 invert"
                 />
               </button>
-            </div>
-            <div class="group relative flex gap-2 items-center">
-              <p class="text-xl">RGB:</p>
-              <input
-                type="text"
-                placeholder="rgb(255, 255, 255)"
-                value="rgb(255, 255, 255)"
-              />
-              <button
-                class="absolute size-5 right-0 top-1/2 -translate-1/2 opacity-0 group-hover:opacity-100 transition duration-400"
-              >
-                <img
-                  src="/assets/icons/copy.svg"
-                  alt="Copy icon"
-                  class="brightness-0 invert"
-                />
-              </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </main>
 
-    <!-- FOOTER -->
     <custom-footer></custom-footer>
-    <!-- END FOOTER -->
-
-    <script type="module" src="../_ui/components/index.ts" defer></script>
   </body>
 </html>
