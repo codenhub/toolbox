@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
           } catch (error) {
             showAlert({
-              message: "Failed to copy to clipboard",
+              message: "Failed to copy to clipboard: " + error,
               type: "error",
             });
           }

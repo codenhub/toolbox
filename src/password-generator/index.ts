@@ -1,3 +1,5 @@
+import { showAlert } from "../_core/utils/index.ts";
+
 const chars = {
   upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   lower: "abcdefghijklmnopqrstuvwxyz",
@@ -32,8 +34,15 @@ const scramble = (input: string): string => {
 const copyToClipboard = (text: string): void => {
   try {
     navigator.clipboard.writeText(text);
+    showAlert({
+      message: "Copied to clipboard",
+      type: "success",
+    });
   } catch (err) {
-    console.error(`Error while copying text to clipboard: ${err}`);
+    showAlert({
+      message: "Failed to copy to clipboard: " + err,
+      type: "error",
+    });
   }
 };
 
