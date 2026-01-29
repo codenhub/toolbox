@@ -113,14 +113,18 @@
           class="relative flex w-fit items-center p-4 gap-4 rounded-md border border-border"
         >
           <span id="pw" class="text-xl mr-6"></span>
-          <button id="regen">
+          <button id="regen" class="tooltip" data-tooltip="Regenerate">
             <img
               src="/assets/icons/refresh.svg"
               alt="Regenerate icon"
               class="size-4"
             />
           </button>
-          <button id="copy" class="primary-btn p-2 aspect-square">
+          <button
+            id="copy"
+            class="tooltip primary-btn p-2 aspect-square"
+            data-tooltip="Copy to clipboard"
+          >
             <img src="/assets/icons/copy.svg" alt="Copy icon" class="size-4" />
           </button>
         </div>

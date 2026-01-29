@@ -41,4 +41,21 @@
   .secondary-btn {
     @apply bg-accent hover:bg-accent-hover text-accent-contrast font-semibold flex w-fit items-center justify-center px-4 py-2 min-h-10 rounded-md transition duration-400;
   }
+
+  .tooltip {
+    @apply relative;
+
+    &.icon {
+      @apply items-center justify-center text-sm font-semibold size-5 bg-accent text-accent-contrast rounded-full cursor-default;
+    }
+
+    &::after {
+      content: attr(data-tooltip);
+      @apply absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full bg-accent rounded-md w-max max-w-3xs p-2 text-sm font-normal text-accent-contrast scale-0 origin-bottom transition-transform duration-200;
+    }
+
+    &:hover::after {
+      @apply scale-100;
+    }
+  }
 }
