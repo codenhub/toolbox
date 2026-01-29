@@ -1,4 +1,5 @@
 import { Controller } from "./models.ts";
+import { showAlert } from "../_core/utils/index.ts";
 
 const controller = new Controller();
 
@@ -66,7 +67,18 @@ document.addEventListener("DOMContentLoaded", () => {
           "absolute size-5 right-5 top-1/2 -translate-1/2 opacity-0 group-hover:opacity-100 transition duration-400";
         copyBtn.innerHTML = `<img src="/assets/icons/copy.svg" alt="Copy icon" class="brightness-0 invert" />`;
         copyBtn.addEventListener("click", () => {
-          navigator.clipboard.writeText(input.value);
+          try {
+            navigator.clipboard.writeText(input.value);
+            showAlert({
+              message: "Copied to clipboard",
+              type: "success",
+            });
+          } catch (error) {
+            showAlert({
+              message: "Failed to copy to clipboard",
+              type: "error",
+            });
+          }
         });
 
         group.appendChild(label);
